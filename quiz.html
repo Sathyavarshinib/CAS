@@ -2,29 +2,28 @@
 <html>
 <head>
   <title>Career Quiz</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h2>Career Interest Quiz</h2>
     <form id="quizForm">
       <label>What is your favorite subject?</label><br>
-      <select name="subject" required>
+      <select id="subject">
         <option value="">--Select--</option>
-        <option value="math">Math</option>
-        <option value="biology">Biology</option>
-        <option value="arts">Arts</option>
+        <option value="Math">Math</option>
+        <option value="Biology">Biology</option>
+        <option value="Arts">Arts</option>
       </select><br><br>
 
       <label>What is your 12th grade percentage?</label><br>
-      <input type="number" id="marks" name="marks" required><br><br>
+      <input type="number" id="marks"><br><br>
 
       <label>Preferred State</label><br>
-      <input type="text" id="state" name="state" placeholder="e.g., Maharashtra" required><br><br>
-
+      <input type="text" id="state" name="state" ><br><br>
       <button type="submit">Submit</button>
     </form>
   </div>
-  <script src="js/quiz.js"></script>
+  <script src="quiz.js"></script>
 </body>
 </html>
