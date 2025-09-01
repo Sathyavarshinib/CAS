@@ -1,29 +1,34 @@
-const career = localStorage.getItem("career");
-const marks = parseFloat(localStorage.getItem("marks"));
-const state = localStorage.getItem("state");
-
-document.getElementById("careerBox").innerText = `🎯 You should pursue: ${career}\nYour 12th Marks: ${marks}%`;
-
-fetch("colleges.json")
-  .then(response => response.json())
-  .then(data => {
-    const list = document.getElementById("collegeList");
-    let found = false;
-
-    data.forEach(college => {
-      if (
-        college.career === career &&
-        college.cutoff <= marks &&
-        college.state.toLowerCase() === state.toLowerCase()
-      ) {
-        const li = document.createElement("li");
-        li.innerText = `${college.college} – ${college.course} (Cutoff: ${college.cutoff}%)`;
-        list.appendChild(li);
-        found = true;
-      }
+const student = JSON.parse(localStorage.getItem("studentData"));
+const resultDiv = document.getElementById("result");
+if (student) {
+  let suggestion = "";
+  if (student.subject === "Math") {
+    suggestion = "Engineering, B.Sc. in Mathematics";
+  } else if (student.subject === "Biology") {
+    suggestion = "MBBS, BDS, B.Sc. in Biology";
+  } else if (student.subject === "Commerce") {
+    suggestion = "B.Com, BBA, CA Foundation";
+  } else {
+    suggestion = "General courses";
+  }
+  fetch("college.json")
+    .then(res => res.json())
+    .then(data => {
+      let eligibleColleges = data.filter(c =>
+        c.state.toLowerCase() === student.state.toLowerCase() &&
+        student.marks >= c.cutoff
+      );
+      let collegeList = eligibleColleges.length > 0
+        ? eligibleColleges.map(c => `${c.name} (${c.course})`).join("<br>")
+        : "No colleges found matching your criteria."
+      resultDiv.innerHTML = `
+        <p>You should pursue: <b>${suggestion}</b></p>
+        <p>Your 12th Marks: <b>${student.marks}%</b></p>
+        <p>Preferred State: <b>${student.state}</b></p>
+        <h3>Colleges You Can Apply To:</h3>
+        <p>${collegeList}</p>
+      `;
     });
-
-    if (!found) {
-      list.innerHTML = "<li>No colleges found matching your profile in the selected state.</li>";
-    }
-  });
+} else {
+  resultDiv.innerHTML = "<p>No student data found. Please take the quiz first.</p>";
+}
