@@ -1,8 +1,8 @@
 [
   {
-    "college": "MIT-WPU Pune",
+    "college": "IIT Bombay",
     "state": "Maharashtra",
-    "course": "B.Tech CSE",
+    "course": "",
     "cutoff": 75,
     "career": "Software Engineer"
   },
@@ -16,7 +16,7 @@
   {
     "college": "JJ School of Arts",
     "state": "Maharashtra",
-    "course": "BFA",
+    "course": "BCA",
     "cutoff": 60,
     "career": "Artist"
   },
@@ -24,14 +24,14 @@
     "college": "IIT Bombay",
     "state": "Maharashtra",
     "course": "B.Tech CSE",
-    "cutoff": 90,
+    "cutoff": 70,
     "career": "Software Engineer"
   },
   {
     "college": "Grant Medical College",
     "state": "Maharashtra",
     "course": "MBBS",
-    "cutoff": 85,
+    "cutoff": 83,
     "career": "Doctor"
   }
 ]
