@@ -1,16 +1,16 @@
 [
   {
-    "college": "IIT Bombay",
-    "state": "Maharashtra",
-    "course": "",
+    "college": "MCET College",
+    "state": "Tamilnadu",
+    "course": "EEE",
     "cutoff": 75,
     "career": "Software Engineer"
   },
   {
-    "college": "AFMC Pune",
-    "state": "Maharashtra",
+    "college": "AIIMS Delhi",
+    "state": "Delhi",
     "course": "MBBS",
-    "cutoff": 90,
+    "cutoff": 85,
     "career": "Doctor"
   },
   {
