@@ -1,10 +1,10 @@
 const colleges = [
   { name: "IIT Bombay", course: "Engineering", state: "Maharashtra", cutoff: 70 },
-  { name: "IIT Delhi", course: "Engineering", state: "Delhi", cutoff: 72 },
-  { name: "AIIMS Delhi", course: "MBBS", state: "Delhi", cutoff: 85 },
+  { name: "MCET College", course: "Engineering", state: "Tamilnadu", cutoff: 75 },
+  { name: "AIIMS Delhi", course: "MBBS", state: "Delhi", cutoff: 72 },
   { name: "Grant Medical College", course: "MBBS", state: "Maharashtra", cutoff: 80 },
-  { name: "NM College", course: "B.Com", state: "Maharashtra", cutoff: 60 },
-  { name: "SRCC", course: "B.Com", state: "Delhi", cutoff: 75 }
+  { name: "RDM College", course: "B.Com", state: "Tamilnadu", cutoff: 85 },
+  { name: "STC", course: "B.Com", state: "Tamilnadu", cutoff: 75 }
 ];
 const student = JSON.parse(localStorage.getItem("studentData"));
 const resultDiv = document.getElementById("result");
