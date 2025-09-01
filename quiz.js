@@ -4,7 +4,7 @@ document.getElementById("quizForm").addEventListener("submit", function(e) {
   const subject = document.getElementById("subject").value;
   const marks = document.getElementById("marks").value;
   const state = document.getElementById("state").value;
-
+  const city = document.getElementById("city").value;
   const studentData = { subject, marks, state };
   localStorage.setItem("studentData", JSON.stringify(studentData));
 
