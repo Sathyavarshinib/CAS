@@ -2,15 +2,15 @@
   {
     "college": "MCET College",
     "state": "Tamilnadu",
-    "course": "EEE",
-    "cutoff": 75,
+    "course": "Engineering",
+    "cutoff": 80,
     "career": "Software Engineer"
   },
   {
     "college": "AIIMS Delhi",
     "state": "Delhi",
     "course": "MBBS",
-    "cutoff": 85,
+    "cutoff": 90,
     "career": "Doctor"
   },
   {
@@ -24,14 +24,14 @@
     "college": "IIT Bombay",
     "state": "Maharashtra",
     "course": "B.Tech CSE",
-    "cutoff": 70,
+    "cutoff": 85,
     "career": "Software Engineer"
   },
   {
     "college": "Grant Medical College",
     "state": "Maharashtra",
     "course": "MBBS",
-    "cutoff": 83,
+    "cutoff": 89,
     "career": "Doctor"
   }
 ]
