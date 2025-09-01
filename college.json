@@ -1,0 +1,37 @@
+[
+  {
+    "college": "MIT-WPU Pune",
+    "state": "Maharashtra",
+    "course": "B.Tech CSE",
+    "cutoff": 75,
+    "career": "Software Engineer"
+  },
+  {
+    "college": "AFMC Pune",
+    "state": "Maharashtra",
+    "course": "MBBS",
+    "cutoff": 90,
+    "career": "Doctor"
+  },
+  {
+    "college": "JJ School of Arts",
+    "state": "Maharashtra",
+    "course": "BFA",
+    "cutoff": 60,
+    "career": "Artist"
+  },
+  {
+    "college": "IIT Bombay",
+    "state": "Maharashtra",
+    "course": "B.Tech CSE",
+    "cutoff": 90,
+    "career": "Software Engineer"
+  },
+  {
+    "college": "Grant Medical College",
+    "state": "Maharashtra",
+    "course": "MBBS",
+    "cutoff": 85,
+    "career": "Doctor"
+  }
+]
