@@ -4,7 +4,7 @@ const state = localStorage.getItem("state");
 
 document.getElementById("careerBox").innerText = `🎯 You should pursue: ${career}\nYour 12th Marks: ${marks}%`;
 
-fetch("data/colleges.json")
+fetch("colleges.json")
   .then(response => response.json())
   .then(data => {
     const list = document.getElementById("collegeList");
