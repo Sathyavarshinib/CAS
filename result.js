@@ -1,7 +1,16 @@
+const colleges = [
+  { name: "IIT Bombay", course: "Engineering", state: "Maharashtra", cutoff: 70 },
+  { name: "IIT Delhi", course: "Engineering", state: "Delhi", cutoff: 72 },
+  { name: "AIIMS Delhi", course: "MBBS", state: "Delhi", cutoff: 85 },
+  { name: "Grant Medical College", course: "MBBS", state: "Maharashtra", cutoff: 80 },
+  { name: "NM College", course: "B.Com", state: "Maharashtra", cutoff: 60 },
+  { name: "SRCC", course: "B.Com", state: "Delhi", cutoff: 75 }
+];
 const student = JSON.parse(localStorage.getItem("studentData"));
 const resultDiv = document.getElementById("result");
 if (student) {
   let suggestion = "";
+
   if (student.subject === "Math") {
     suggestion = "Engineering, B.Sc. in Mathematics";
   } else if (student.subject === "Biology") {
@@ -11,24 +20,21 @@ if (student) {
   } else {
     suggestion = "General courses";
   }
-  fetch("college.json")
-    .then(res => res.json())
-    .then(data => {
-      let eligibleColleges = data.filter(c =>
-        c.state.toLowerCase() === student.state.toLowerCase() &&
-        student.marks >= c.cutoff
-      );
-      let collegeList = eligibleColleges.length > 0
-        ? eligibleColleges.map(c => `${c.name} (${c.course})`).join("<br>")
-        : "No colleges found matching your criteria."
-      resultDiv.innerHTML = `
-        <p>You should pursue: <b>${suggestion}</b></p>
-        <p>Your 12th Marks: <b>${student.marks}%</b></p>
-        <p>Preferred State: <b>${student.state}</b></p>
-        <h3>Colleges You Can Apply To:</h3>
-        <p>${collegeList}</p>
-      `;
-    });
+  let eligibleColleges = colleges.filter(c =>
+    c.state.toLowerCase() === student.state.toLowerCase() &&
+    student.marks >= c.cutoff
+  );
+  let collegeList = eligibleColleges.length > 0
+    ? eligibleColleges.map(c => `${c.name} (${c.course})`).join("<br>")
+    : "No colleges found matching your criteria.";
+
+  resultDiv.innerHTML = `
+    <p>You should pursue: <b>${suggestion}</b></p>
+    <p>Your 12th Marks: <b>${student.marks}%</b></p>
+    <p>Preferred State: <b>${student.state}</b></p>
+    <h3>Colleges You Can Apply To:</h3>
+    <p>${collegeList}</p>
+  `;
 } else {
   resultDiv.innerHTML = "<p>No student data found. Please take the quiz first.</p>";
 }
