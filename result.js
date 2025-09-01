@@ -11,7 +11,7 @@ const resultDiv = document.getElementById("result");
 if (student) {
   let suggestion = "";
 
-  if (student.subject === "Math") {
+  if (student.subject === "Maths") {
     suggestion = "Engineering, B.Sc. in Mathematics";
   } else if (student.subject === "Biology") {
     suggestion = "MBBS, BDS, B.Sc. in Biology";
@@ -32,6 +32,7 @@ if (student) {
     <p>You should pursue: <b>${suggestion}</b></p>
     <p>Your 12th Marks: <b>${student.marks}%</b></p>
     <p>Preferred State: <b>${student.state}</b></p>
+    <p>Preferred City: <b>${student.city}</b></p>
     <h3>Colleges You Can Apply To:</h3>
     <p>${collegeList}</p>
   `;
