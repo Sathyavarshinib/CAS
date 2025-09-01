@@ -1,16 +1,13 @@
 document.getElementById("quizForm").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  let subject = document.getElementById("subject").value;
-  let marks = parseInt(document.getElementById("marks").value); // 👉 number-ஆ convert
-  let state = document.getElementById("state").value;
+  const subject = document.getElementById("subject").value;
+  const marks = document.getElementById("marks").value;
+  const state = document.getElementById("state").value;
 
-  let student = {
-    subject: subject,
-    marks: marks,
-    state: state
-  };
+  const studentData = { subject, marks, state };
+  localStorage.setItem("studentData", JSON.stringify(studentData));
 
-  localStorage.setItem("studentData", JSON.stringify(student));
+  // redirect to result page
   window.location.href = "result.html";
 });
