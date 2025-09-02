@@ -3,7 +3,7 @@
     "college": "MCET College",
     "state": "Tamilnadu",
     "course": "Engineering",
-    "city": "Pollachi",
+    "city": "Coimbatore",
     "cutoff": 80,
     "career": "Software Engineer"
   },
@@ -38,5 +38,69 @@
     "city" : "Chennai",
     "cutoff": 89,
     "career": "Doctor"
+  {
+    "name": "IIT Bombay",
+    "state": "Maharashtra",
+    "city": "Mumbai",
+    "course": "Engineering",
+    "cutoff": 90,
+    "career": "Software developer "
+  },
+  {
+    "name": "IIT Delhi",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "course": "Engineering",
+    "cutoff": 92,
+    "career": "Tester"
+  },
+  {
+    "name": "Anna University",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "course": "Engineering",
+    "cutoff": 75,
+    "career": "Software developer"
+  },
+  {
+    "name": "NIT Trichy",
+    "state": "Tamil Nadu",
+    "city": "Tiruchirappalli",
+    "course": "Engineering",
+    "cutoff": 85,
+    "career": "Software Engineer"
+  },
+  {
+    "name": "AIIMS Delhi",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "course": "Medical",
+    "cutoff": 92,
+    "career": "Nurse"
+  },
+  {
+    "name": "Madras Medical College",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "course": "Medical",
+    "cutoff": 85,
+    "career": "MBBS"
+  },
+  {
+    "name": "Delhi University",
+    "state": "Delhi",
+    "city": "New Delhi",
+    "course": "Commerce",
+    "cutoff": 85,
+    "career": "CMA"
+  },
+  {
+    "name": "Loyola College",
+    "state": "Tamil Nadu",
+    "city": "Chennai",
+    "course": "Commerce",
+    "cutoff": 80
+    "career": "CA"
   }
 ]
+  
